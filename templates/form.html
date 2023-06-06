@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='form-validation.js') }}"></script>
+    <title>Project</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div style="height: 360px;"></div>
+    <div class="signupSection">
+        <form id="login_form" method="POST" action="/apply">
+            <div class="signupForm">
+                <h2>RMK Forms</h2>
+                <div class="inputContainer">
+                    <label for="student_name">Name:</label>
+                    <input type="text" class="inputFields mb-4" id="student_name" name="student_name" placeholder="John Doe" value="" required/>
+                </div>
+
+                <div class="inputContainer">
+                    <label for="reg_no">Registration Number:</label>
+                    <input type="number" id="reg_no" name="reg_no" class="inputFields mb-4" placeholder="111622201001" value="" required>
+                </div>
+
+                <div class="inputContainer">
+                    <label for="phone_no">Phone Number:</label>
+                    <input type="tel" class="inputFields mb-4" id="phone_no" name="phone_no" placeholder="1234567890" value="" required/>
+                </div>
+
+                <div class="inputContainer">
+                    <label for="email">Email ID:</label>
+                    <input type="email" class="inputFields mb-4" id="email" name="email" placeholder="sample@gmail.com" value="" required/>
+                </div>
+
+                <div class="inputContainer">
+                    <label for="department">Department:</label>
+                    <select name="department" id="department" class="inputFields mb-4" value="" required>
+                        <option value="Computer Science Engineering">Computer Science Engineering</option>
+                        <option value="Artificial Intelligence and Data Science">Artificial Intelligence and Data Science</option>
+                        <option value="Electrical and Communication Engineering">Electrical and Communication Engineering</option>
+                        <option value="Cyber Security">Cyber Security</option>
+                    </select>
+                </div>
+
+                <div class="inputContainer">
+                    <label for="address">Address:</label>
+                    <textarea name="address" class="inputFields mb-4" id="address" cols="30" rows="5" placeholder="Buliding Number , Building Name, Door Number,&#10;Street Name, Area,&#10;City - Pincode,&#10;State  " value="" required></textarea>
+                </div>
+
+                <div class="inputContainer">
+                    <label for="leaving_date">Date Of Leaving:</label>
+                    <input type="date" id="leaving_date" name="leaving_date" class="inputFields mb-4"  value="" required>
+                </div>
+
+                <div class="inputContainer">
+                    <label for="leaving_time">Time Of Leaving:</label>
+                    <input type="time" id="leaving_time" name="leaving_time" class="inputFields mb-4"  value="" required>
+                </div>
+
+                <div class="inputContainer">
+                    <label for="arriving_date">Date Of Arriving:</label>
+                    <input type="date" id="arriving_date" name="arriving_date" class="inputFields mb-4"  value="" required>
+                </div>
+
+                <div class="inputContainer">
+                    <label for="arriving_time">Time Of Arriving:</label>
+                    <input type="time" id="arriving_time" name="arriving_time" class="inputFields mb-4"  value="" required>
+                </div>
+
+                <div id="center-btn">
+                    <input type="submit" id="join-btn" name="join" alt="Join" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div style="height: 370px;"></div>
+    {% include 'footer.html' %}
+</body>
+</html>

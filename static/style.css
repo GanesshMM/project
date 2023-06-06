@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url(/static/bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.signupSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+.signupForm {
+  width: 100%;
+  padding: 30px;
+  background: rgba(20, 40, 40, .8);
+  transition: .2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.inputContainer {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.inputFields {
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid rgba(10, 180, 180, 1);
+  background: rgba(20, 20, 20, .2);
+  color: white;
+  outline: none;
+  box-sizing: border-box;
+}
+
+#center-btn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#join-btn {
+  border: 1px solid rgba(10, 180, 180, 1);
+  background: rgba(20, 20, 20, .6);
+  font-size: 18px;
+  color: white;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+#join-btn:hover {
+  background-color: rgba(20, 20, 20, .8);
+  padding: 10px 80px;
+}
