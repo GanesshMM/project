@@ -1,0 +1,6 @@
+Flask
+gunicorn
+pymysql
+sqlalchemy
+fpdf
+mimetypes
