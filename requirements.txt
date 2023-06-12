@@ -3,4 +3,3 @@ gunicorn
 pymysql
 sqlalchemy
 fpdf
-mimetypes
